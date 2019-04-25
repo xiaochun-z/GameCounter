@@ -7,12 +7,15 @@
 
 XboxOne游戏数据来源：
 https://en.wikipedia.org/wiki/List_of_Xbox_One_games
+
 Xboxone上的兼容游戏数据来源：
 https://en.wikipedia.org/wiki/List_of_backward_compatible_games_for_Xbox_One
 
 PS 4 游戏数据来源：
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_games
+
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_games_(M-Z)
+
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_free-to-play_games
 
 #### 为什么不使用直接商店的数据呢？
