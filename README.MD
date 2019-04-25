@@ -3,7 +3,7 @@
 今天花了点时间，写了个小程序来数一数。
 
 ## 声明：
-### 数据来源为github的统计列表，网址分别为：
+### 数据来源为维基百科的统计列表，网址分别为：
 
 XboxOne游戏数据来源：
 https://en.wikipedia.org/wiki/List_of_Xbox_One_games
@@ -17,6 +17,8 @@ https://en.wikipedia.org/wiki/List_of_PlayStation_4_games
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_games_(M-Z)
 
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_free-to-play_games
+
+> 维基的这些数据被导入了[excel](GameCounter/library-04-25-2019.xlsx)中，所以原网址更新，excel不会自动更新，需要手动维护这个excel.
 
 #### 为什么不使用直接商店的数据呢？
 如果要使用商店数据，首先得写爬虫去爬下来所有的游戏列表；其次由于地域差别，部分游戏在部分地区不上架，这回导致爬虫需要爬很多地区的商品，然后汇总。
