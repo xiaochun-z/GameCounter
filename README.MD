@@ -5,18 +5,16 @@
 ## 声明：
 ### 数据来源为维基百科的统计列表，网址分别为：
 
-XboxOne游戏数据来源：
+XboxOne游戏数据来源：  
 https://en.wikipedia.org/wiki/List_of_Xbox_One_games
 
-Xboxone上的兼容游戏数据来源：
+Xboxone上的兼容游戏数据来源：  
 https://en.wikipedia.org/wiki/List_of_backward_compatible_games_for_Xbox_One
 
-PS 4 游戏数据来源：
-https://en.wikipedia.org/wiki/List_of_PlayStation_4_games
-
-https://en.wikipedia.org/wiki/List_of_PlayStation_4_games_(M-Z)
-
-https://en.wikipedia.org/wiki/List_of_PlayStation_4_free-to-play_games
+PS 4 游戏数据来源：  
+https://en.wikipedia.org/wiki/List_of_PlayStation_4_games  
+https://en.wikipedia.org/wiki/List_of_PlayStation_4_games_(M-Z)  
+https://en.wikipedia.org/wiki/List_of_PlayStation_4_free-to-play_games  
 
 > 维基的这些数据被导入了[excel](GameCounter/library-04-25-2019.xlsx)中，所以原网址更新，excel不会自动更新，需要手动维护这个excel.
 
