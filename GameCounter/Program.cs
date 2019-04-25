@@ -35,10 +35,20 @@ namespace GameCounter
             var games_on_PS4_but_unavailable_for_Xboxone = games_Available_On_Ps4
                 .Where(a => games_Available_On_Xboxone.All(b => b.Name != a.Name)).ToList();
 
+            var games_on_both_platforms =
+                games_Available_On_Ps4.Where(a => games_Available_On_Xboxone.Any(b => b.Name == a.Name)).ToList();
+
+            Console.WriteLine($"Games available on xboxone: {games_Available_On_Xboxone.Count}");
+            Console.WriteLine($"Games available on Ps4: {games_Available_On_Ps4.Count}");
+            Console.WriteLine($"Games available on XboxOne but NOT available on PS4: {games_on_xboxone_but_unavailable_for_PS4.Count}");
+            Console.WriteLine($"Games available on PS4 but NOT available on XboxOne: {games_on_PS4_but_unavailable_for_Xboxone.Count}");
+            Console.WriteLine($"Games available on both platforms: {games_on_both_platforms.Count}");
+
             // create report.
             Console.WriteLine("creating report...");
             CreateReport(games_on_xboxone_but_unavailable_for_PS4, "microsoft_exclusive.xlsx", "Games on XboxOne or PC");
             CreateReport(games_on_PS4_but_unavailable_for_Xboxone, "PS4_exclusive.xlsx", "Games on PS4 or PC");
+            CreateReport(games_on_both_platforms, "PS4_Xboxone.xlsx", "Games on both PS4 and Xboxone");
             Console.WriteLine("done..");
             Console.ReadKey();
         }
