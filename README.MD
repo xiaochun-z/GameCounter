@@ -8,7 +8,7 @@
 * 能在Xboxone上能玩到的游戏，但无法在PS4上玩到的游戏共有 1487 个，完整列表：[microsoft_exclusive.xlsx](GameCounter/microsoft_exclusive.xlsx)
 * 能在PS4上玩到，但无法在Xboxone上玩到的游戏，共有929个，完整列表： [PS4_exclusive.xlsx](GameCounter/PS4_exclusive.xlsx)
 * 两个平台都能玩到的游戏共有1035个。完整列表：[PS4_Xboxone.xlsx](GameCounter/PS4_Xboxone.xlsx)
-* 经提醒，PS Now虽然会出现较严重的卡顿，但毕竟也提供了一个可能性，至今部分人能够通过这个途径玩到上代的游戏。所以在PS4游戏库基础上再包含PS Now的游戏，则能在PS4玩到2328款游戏。  
+* 经提醒，PS Now虽然会出现较严重的卡顿，但毕竟也提供了一个可能性，至少能有部分人能够通过这个途径玩到上代Play Station的游戏。所以在PS4游戏库基础上再包含PS Now的游戏，则能在PS4玩到2328款游戏。  
 ![screenshot](GameCounter/screenshot.png "screenshot")
 
 ## 声明：
