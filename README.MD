@@ -8,6 +8,7 @@
 * 能在Xboxone上能玩到的游戏，但无法在PS4上玩到的游戏共有 1487 个，完整列表：[microsoft_exclusive.xlsx](GameCounter/microsoft_exclusive.xlsx)
 * 能在PS4上玩到，但无法在Xboxone上玩到的游戏，共有929个，完整列表： [PS4_exclusive.xlsx](GameCounter/PS4_exclusive.xlsx)
 * 两个平台都能玩到的游戏共有1035个。完整列表：[PS4_Xboxone.xlsx](GameCounter/PS4_Xboxone.xlsx)
+* 经提醒，PS Now虽然会出现较严重的卡顿，但毕竟也提供了一个选择项，所以在PS4游戏库基础上再包含PS Now的游戏，则能在PS4玩到2328款游戏。
 ![screenshot](GameCounter/screenshot.png "screenshot")
 
 ## 声明：
@@ -23,6 +24,9 @@ PS 4 游戏数据来源：
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_games  
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_games_(M-Z)  
 https://en.wikipedia.org/wiki/List_of_PlayStation_4_free-to-play_games  
+PS Now 游戏数据来源：  
+https://en.wikipedia.org/wiki/List_of_PlayStation_Now_games
+
 
 > 维基的这些数据被导入了[excel](GameCounter/library-04-25-2019.xlsx)中，所以原网址更新，excel不会自动更新，需要手动维护这个excel.
 

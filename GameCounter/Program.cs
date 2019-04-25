@@ -22,6 +22,8 @@ namespace GameCounter
             var xbox360CompatibleGames = SpreadsheetReader.ReadGames(file, "Xbox 360 Compatible", 1, -1, 2, 5);
             var xboxCompatibleGames = SpreadsheetReader.ReadGames(file, "Xbox 1st Gen Compatible", 1, -1, 2, 3);
 
+            var PSNowGames = SpreadsheetReader.ReadPSNow(file);
+
             var games_Available_On_Xboxone = new List<Game>();
             games_Available_On_Xboxone.AddRange(xboxoneGames);
             games_Available_On_Xboxone.AddRange(xbox360CompatibleGames);
@@ -35,11 +37,17 @@ namespace GameCounter
             var games_on_PS4_but_unavailable_for_Xboxone = games_Available_On_Ps4
                 .Where(a => games_Available_On_Xboxone.All(b => b.Name != a.Name)).ToList();
 
+            var games_on_PS4_Include_PSNow = new List<Game>();
+            games_on_PS4_Include_PSNow.AddRange(games_Available_On_Ps4);
+            games_on_PS4_Include_PSNow.AddRange(PSNowGames.Where(a => a.Platform != "PS4"));
+
             var games_on_both_platforms =
                 games_Available_On_Ps4.Where(a => games_Available_On_Xboxone.Any(b => b.Name == a.Name)).ToList();
 
             Console.WriteLine($"Games available on xboxone: {games_Available_On_Xboxone.Count}");
             Console.WriteLine($"Games available on Ps4: {games_Available_On_Ps4.Count}");
+            Console.WriteLine($"PSNow Games: {PSNowGames.Count}(PS4: {PSNowGames.Count(a => a.Platform == "PS4")}, PS3: {PSNowGames.Count(a => a.Platform == "PS3")}, PS2: {PSNowGames.Count(a => a.Platform == "PS2")})");
+            Console.WriteLine($"Games Available on PS4(including PSNow): {games_on_PS4_Include_PSNow.Count}");
             Console.WriteLine($"Games available on XboxOne but NOT available on PS4: {games_on_xboxone_but_unavailable_for_PS4.Count}");
             Console.WriteLine($"Games available on PS4 but NOT available on XboxOne: {games_on_PS4_but_unavailable_for_Xboxone.Count}");
             Console.WriteLine($"Games available on both platforms: {games_on_both_platforms.Count}");
@@ -95,12 +103,32 @@ namespace GameCounter
                 for (var i = 2; ; i++)
                 {
                     var name = nameIndex > 0 ? ws.GetValue(i, nameIndex) : "N/A";
+                    if (name == null) break;
                     var genre = genreIndex > 0 ? ws.GetValue(i, genreIndex) : "N/A";
                     var publisher = publisherIndex > 0 ? ws.GetValue(i, publisherIndex) : "N/A";
                     var date = dateIndex > 0 ? ws.GetValue(i, dateIndex) : "N/A";
 
+                    games.Add(new Game(name.ToString(), genre?.ToString(), publisher?.ToString(), date?.ToString()));
+                }
+            }
+
+            return games;
+        }
+
+        public static List<PSNowGame> ReadPSNow(FileInfo excel)
+        {
+            var games = new List<PSNowGame>();
+            using (var xlPackage = new ExcelPackage(excel))
+            {
+                var ws = xlPackage.Workbook.Worksheets.First(a => a.Name == "PSNow");
+                for (var i = 2; ; i++)
+                {
+                    var name = ws.GetValue(i, 2);
                     if (name == null) break;
-                    games.Add(new Game(name?.ToString(), genre?.ToString(), publisher?.ToString(), date?.ToString()));
+                    var genre = ws.GetValue(i, 4);
+                    var publisher = ws.GetValue(i, 3);
+                    var platform = ws.GetValue(i, 1);
+                    games.Add(new PSNowGame(name.ToString(), genre?.ToString(), publisher?.ToString(), null, platform?.ToString()));
                 }
             }
 
@@ -130,5 +158,14 @@ namespace GameCounter
         {
             return $"{Name}----{Genre}----{Publisher}----{AddDate}";
         }
+    }
+
+    public class PSNowGame : Game
+    {
+        public PSNowGame(string name, string genre, string publisher, string addDate, string platform) : base(name, genre, publisher, addDate)
+        {
+            Platform = platform;
+        }
+        public string Platform { get; }
     }
 }
