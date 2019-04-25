@@ -1,6 +1,14 @@
-大家知道XboxOne和PS4上分别能玩到多少游戏吗
-不如大家来数一数吧。
-今天花了点时间，写了个小程序来数一数。
+大家知道XboxOne和PS4上分别能玩到多少游戏吗，这个小工具帮助统计平台游戏数据，顺带导出游戏名称列表。
+这对于买Xboxone还是买PS4，可以有一定参考作用。
+
+## 结论
+截至现在(2019/04/25)
+* Xboxone上1952个原生平台游戏，另外还能玩到来自Xbox360的555个兼容游戏，以及33个来自初代Xboxone的兼容游戏，合计1952+555+33=2540个。能在Xbxone/XboxOne S/ Xboxone X上能玩到的游戏列表：[library-04-25-2019.xlsx](GameCounter/library-04-25-2019.xlsx)
+* PS4上由于没有兼容游戏，所以就直接是原生平台游戏1964个。能在PS4/PS4 Pro上玩到的游戏列表：[library-04-25-2019.xlsx](GameCounter/library-04-25-2019.xlsx)
+* 能在Xboxone上能玩到的游戏，但无法在PS4上玩到的游戏共有 1487 个，完整列表：[microsoft_exclusive.xlsx](GameCounter/microsoft_exclusive.xlsx)
+* 能在PS4上玩到，但无法在Xboxone上玩到的游戏，共有929个，完整列表： [PS4_exclusive.xlsx](GameCounter/PS4_exclusive.xlsx)
+* 两个平台都能玩到的游戏共有1035个。完整列表：[PS4_Xboxone.xlsx](GameCounter/PS4_Xboxone.xlsx)
+![screenshot](GameCounter/screenshot.png "screenshot")
 
 ## 声明：
 ### 数据来源为维基百科的统计列表，网址分别为：
@@ -33,12 +41,3 @@ https://en.wikipedia.org/wiki/List_of_PlayStation_4_free-to-play_games
 所以这个独占列表不严谨，生成这个列表的目的是为了列出这两类内容：
 * 在xboxone上能玩到的游戏，但PS4上玩不到（无视PC）
 * 在PS4上能玩到的游戏，但Xboxone上玩不到(无视PC)
-
-## 结论
-截至现在(2019/04/25)
-* Xboxone上1952个原生平台游戏，另外还能玩到来自Xbox360的555个兼容游戏，以及33个来自初代Xboxone的兼容游戏，合计1952+555+33=2540个。完整列表[library-04-25-2019.xlsx](GameCounter/library-04-25-2019.xlsx)
-* PS4上由于没有兼容游戏，所以就直接是1964个。完整列表[library-04-25-2019.xlsx](GameCounter/library-04-25-2019.xlsx)
-* 能在Xboxone上能玩到的游戏，但在PS4上无法玩到的游戏共有 1487个，完整列表[microsoft_exclusive.xlsx](GameCounter/microsoft_exclusive.xlsx)
-* 能在PS4上玩到的游戏，但无法在Xboxone上玩到，共有929个，完整列表[PS4_exclusive.xlsx](GameCounter/PS4_exclusive.xlsx)
-* 两个平台都有的游戏共有1035个。完整列表[PS4_Xboxone.xlsx](GameCounter/PS4_Xboxone.xlsx)
-![screenshot](GameCounter/screenshot.png "screenshot")
