@@ -37,8 +37,8 @@ namespace GameCounter
 
             // create report.
             Console.WriteLine("creating report...");
-            CreateReport(games_on_xboxone_but_unavailable_for_PS4, "xboxone_exclusive.xlsx", "Games on XboxOne/PC");
-            CreateReport(games_on_PS4_but_unavailable_for_Xboxone, "PS4_exclusive.xlsx", "Games on PS4/PC");
+            CreateReport(games_on_xboxone_but_unavailable_for_PS4, "microsoft_exclusive.xlsx", "Games on XboxOne or PC");
+            CreateReport(games_on_PS4_but_unavailable_for_Xboxone, "PS4_exclusive.xlsx", "Games on PS4 or PC");
             Console.WriteLine("done..");
             Console.ReadKey();
         }
